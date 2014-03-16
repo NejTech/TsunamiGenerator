@@ -1,0 +1,34 @@
+﻿<Controls:MetroWindow x:Class="TsunamiGenerator.DisclaimerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:const="clr-namespace:TsunamiGenerator.Languages"
+        Title="Disclaimer" Height="400" Width="450" ContentRendered="MetroWindow_ContentRendered" 
+        Background="#FFC70606" ResizeMode="NoResize" Icon="blank_icon.ico" ShowIconOnTitleBar="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="{x:Static const:Text.bsdDisclaimer}"
+               Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="5" TextWrapping="WrapWithOverflow" TextAlignment="Justify" Margin="5,5,5,5" FontSize="12" />
+        <TextBlock Text="{x:Static const:Text.legalWarning}"
+                   Grid.Row="5" Grid.ColumnSpan="8" TextWrapping="WrapWithOverflow" TextAlignment="Justify" Margin="5,5,5,5" FontSize="12"/>
+        <Button Content="{x:Static const:Text.legalConfirmButton}" Grid.Row="6" Grid.ColumnSpan="4" Grid.Column="2" FontSize="14" Height="35" Click="Button_Click"/>
+    </Grid>
+</Controls:MetroWindow>
